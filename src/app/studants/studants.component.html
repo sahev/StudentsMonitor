@@ -1,7 +1,29 @@
 <div *ngIf="studantSelected">
-    <app-title [title]="'Aluno: ' + studantSelected "></app-title>
 
-    <button class="btn btn-default" (click)="back()">Voltar</button>
+    <div class="row">
+        <div class="mr-auto">
+            <app-title [title]="'Aluno: ' + studantSelected.name "></app-title>
+        </div>
+        <div class="mt-2">
+            <button class="btn btn-warning" (click)="back()">Voltar</button>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Nome</label>
+            <input type="text" value='{{studantSelected.name}}' class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Sobrenome</label>
+            <input type="text" value='{{studantSelected.lastname}}' class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Telefone</label>
+            <input type="text" value='{{studantSelected.tel}}' class="form-control">
+        </div>
+
+    </form>
 
 </div>
 <br>
